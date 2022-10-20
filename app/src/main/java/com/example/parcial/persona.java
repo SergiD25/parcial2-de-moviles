@@ -10,16 +10,28 @@ public class persona {
     int creditos;
     int valorc;
 
-    persona()
+    public int getpersona()
     {
-        nombre = nombre;
-        apellido = apellido;
-        direccion = direccion;
-        telefono = telefono;
-        edad = edad;
-        documento = documento;
-        creditos = creditos;
-        valorc = 100000;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.edad = edad;
+        this.documento = documento;
+        this.creditos = creditos;
+        this.valorc = 100000;
+
+        return valorc;
+    }
+
+    public int getCreditos(int ed6)
+    {
+        return creditos= 8;
+    }
+
+
+    public int getCreditos() {
+        return creditos = 8;
     }
 }
 

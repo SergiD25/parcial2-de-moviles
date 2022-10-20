@@ -6,9 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         ed7 = (EditText) findViewById(R.id.documento);
 
         persona personita = new persona();
+
+        persona credito = new persona();
+        credito.getCreditos(8);
+
+
+
     }
 
     public void Enviar(View view)
@@ -43,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
         Intent enviar = new Intent(this,MainActivity2.class);
         enviar.putExtra("nombre",ed1.getText().toString());
         enviar.putExtra("apellido",ed2.getText().toString());
+
+        Bundle bundle = new Bundle();
         enviar.putExtra("creditos",ed6.getText().toString());
+
         enviar.putExtra("documento",ed7.getText().toString());
         startActivity(enviar);
     }
