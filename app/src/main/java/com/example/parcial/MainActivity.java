@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
         ed6 = (EditText) findViewById(R.id.creditos);
         ed7 = (EditText) findViewById(R.id.documento);
 
-        persona personita = new persona();
 
-        persona credito = new persona();
-        credito.getCreditos(8);
+
+
+
+
+
 
 
 
@@ -47,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
         enviar.putExtra("nombre",ed1.getText().toString());
         enviar.putExtra("apellido",ed2.getText().toString());
 
-        Bundle bundle = new Bundle();
+
         enviar.putExtra("creditos",ed6.getText().toString());
+
 
         enviar.putExtra("documento",ed7.getText().toString());
         startActivity(enviar);

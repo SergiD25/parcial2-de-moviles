@@ -2,10 +2,10 @@ package com.example.parcial;
 
 public class Iva {
 
-    public int Iva1(Multi a)
+    public int Iva1(int a)
     {
 
-        final int i = (800000 * 19) / 100;
+        final int i = (a * 19) / 100;
         return i;
     }
 }

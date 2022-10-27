@@ -22,17 +22,16 @@ public class persona {
         this.valorc = 100000;
 
         return valorc;
+
     }
 
-    public int getCreditos(int ed6)
+    public int getCreditos()
     {
-        return creditos= 8;
+
+        return creditos;
     }
 
 
-    public int getCreditos() {
-        return creditos = 8;
-    }
 }
 
 

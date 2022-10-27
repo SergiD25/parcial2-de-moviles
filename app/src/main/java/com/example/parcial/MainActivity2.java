@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity2 extends AppCompatActivity {
 
     private TextView tn;
@@ -31,7 +29,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         /**calcuklo de la recursividad del subtotal*/
 
-        int vlr;
 
         tn = (TextView) findViewById(R.id.nombre2);
         String nombre = getIntent().getStringExtra("nombre");
@@ -52,8 +49,10 @@ public class MainActivity2 extends AppCompatActivity {
         String credito = getIntent().getStringExtra("creditos");
         vc.setText(credito);
 
-        persona credito1 = new persona();
-        credito1.getCreditos();
+
+
+        String numcreditos= vc.getText().toString();
+        int creditoobt = Integer.parseInt(numcreditos);
 
 
         persona hola = new persona();
@@ -63,19 +62,20 @@ public class MainActivity2 extends AppCompatActivity {
         vlunt.setText(Integer.toString(hola.getpersona()));
 
 
+
         subtotal = (TextView) findViewById(R.id.subtotal);
         Multi mt =new Multi();
-        subtotal.setText(Integer.toString(mt.Multip(hola.getpersona(),credito1.getCreditos())));
+        subtotal.setText(Integer.toString(mt.Multip(hola.getpersona(), creditoobt)));
 
 
         iva = (TextView) findViewById(R.id.iva);
         Iva iva1 = new Iva();
-        iva.setText(Integer.toString(iva1.Iva1(mt)));
+        iva.setText(Integer.toString(iva1.Iva1(mt.Multip(hola.getpersona(), creditoobt))));
 
 
         total = (TextView) findViewById(R.id.total);
         Total tl = new Total();
-        total.setText(Integer.toString(tl.total(mt)));
+        total.setText(Integer.toString(tl.total(mt.Multip(hola.getpersona(), creditoobt), iva1.Iva1(mt.Multip(hola.getpersona(), creditoobt)))));
 
 
 

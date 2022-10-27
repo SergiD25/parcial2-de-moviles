@@ -2,9 +2,9 @@ package com.example.parcial;
 
 public class Total {
 
-    public int total(Multi a)
+    public int total(int a, int b)
     {
-        int i= 800000 + 152000;
+        int i= a + b ;
         return i;
     }
 }
