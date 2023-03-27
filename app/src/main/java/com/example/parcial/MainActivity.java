@@ -56,4 +56,6 @@ public class MainActivity extends AppCompatActivity {
         enviar.putExtra("documento",ed7.getText().toString());
         startActivity(enviar);
     }
+
+
 }
